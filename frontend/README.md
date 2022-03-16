@@ -19,6 +19,8 @@ You will also see any lint errors in the console.
 
 ## Tasks
 
+Do these prior to the live coding challenge
+
 - Add a new entity called `Author` with a first name and a last name. 
 You will see that this entity is already supported by the backend.
 - A user should be able to create a new `Author`, edit an existing one and list all existing ones.
