@@ -13,7 +13,8 @@
         "react-dom": "^16.13.1",
         "react-router-dom": "^5.2.0",
         "react-scripts": "3.4.2",
-        "react-widgets": "^4.5.0"
+        "react-widgets": "^4.5.0",
+        "yarn": "^1.22.19"
     },
     "scripts": {
         "start": "react-scripts start",

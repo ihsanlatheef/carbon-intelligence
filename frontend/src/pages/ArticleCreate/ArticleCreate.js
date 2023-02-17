@@ -30,12 +30,12 @@ function ArticleCreate() {
           <Form.Control type="text" placeholder="Title" value={title} onChange={(event) => setTitle(event.target.value)} />
         </Form.Group>
         <Form.Group>
-          <Form.Label>Author</Form.Label>
-          <AuthorDropdown value={authors} onChange={(authors) => setAuthors(authors)} />
-        </Form.Group>
-        <Form.Group>
           <Form.Label>Content</Form.Label>
           <Form.Control as="textarea" placeholder="Content" rows="5" value={content} onChange={(event) => setContent(event.target.value)} />
+        </Form.Group>
+        <Form.Group>
+          <Form.Label>Author</Form.Label>
+          <AuthorDropdown value={authors} onChange={(authors) => setAuthors(authors)} />
         </Form.Group>
         <Form.Group>
           <Form.Label>Regions</Form.Label>
