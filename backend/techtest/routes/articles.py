@@ -44,8 +44,14 @@ def get_update_delete_article(session, id):
         return {'success': True}
 
     if request.method == 'PUT':
-        for key, value in request.get_json().items():
+        req_json = request.get_json()
+        regions_json = req_json.pop('regions', [])
+        for key, value in req_json.items():
             setattr(article, key, value)
+        regions = session.query(Region).filter(
+            Region.id.in_([r['id'] for r in regions_json])
+        ).all()
+        article.regions = [r for r in regions]
         session.commit()
 
     return jsonify(article.asdict(follow=['regions', 'author']))
